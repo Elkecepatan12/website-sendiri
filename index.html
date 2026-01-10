@@ -31,6 +31,10 @@
             color: var(--text-color);
             line-height: 1.6;
             overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        html{
+          scroll-behavior: smooth;
         }
         img {
             width: 100%;
@@ -182,17 +186,60 @@
                 padding: 1rem;
             }
         }
+         nav {
+            background-color: var(--white);
+            height: 70px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo {
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        /* Nav Links */
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 400;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
     </style>
 </head>
 <body>
-  
-    <header>
+      <nav class="navbar">
+        <a href="#" class="logo">AQUA</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#manfaat">manfaat</a></li>
+            <li><a href="#contact">kontak</a></li>
+            <li><a href="#products">product</a></li>
+        </ul>
+    </nav>
+    
+    <header id="home" >
         <h1>Kopi Nusantara</h1>
         <p>Menjual kopi pilihan terbaik dari petani lokal</p>
     </header>
     <main class="container">
         <!-- Section Manfaat -->
-        <section class="manfaat">
+        <section class="manfaat" id="manfaat">
             <h2>Manfaat Minum Kopi:</h2>
             <ul>
                 <li>⚡ Meningkatkan Fokus</li>
@@ -201,7 +248,7 @@
             </ul>
         </section>
         <!-- Section Produk -->
-        <section class="products">
+        <section class="products" id="products">
             <!-- Card 1 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Kopi Arabika" />
@@ -228,8 +275,12 @@
             </div>
         </section>
     </main>
+    <section class="contact" id="contact">
     <footer>
+
         <p>&copy; 2026 <strong>Kopi Nusantara</strong>. All rights reserved.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.667056952686!2d106.8271106!3d-6.175308299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1768035255083!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </footer>
+    </section>
 </body>
 </html>
